@@ -4,6 +4,62 @@
 
     <!-- CSS ----------------------------------------------------------->
     <style>
+    body {
+        margin: 0;
+        padding:0;
+        font-family: sans-serif;
+    }
+
+    *{
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    }
+
+    .main{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+     .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 70%;
+      height: 50%;
+      box-shadow: 0px 0px 10px #cccccc;
+    }
+
+   [class|="action"]{
+     width: 200px;
+     height: 200px;
+     background-color: grey;
+   }
+
+   img{
+     width: 200px;
+     height: 200px;
+   }
+
+   .header{
+     width: 70%;
+     height: 100px;
+     background.color: grey;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 50px;
+
+   }
+
+   .logout{
+    float: right;
+   }
 
     </style>
 
@@ -16,7 +72,29 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+  <div class="logout"><img src="Logout.png" alt="LOGOUT"></div>
+  <section class="main">
 
+
+
+      <div class="header"><p>Study Group Finder</p></div>
+
+      <div class="container">
+        <div class="action-1">
+          <a href="search.html"><img src="lupe.jpg" alt="SUCHE"></a>
+        </div>
+        <div class="action-2">
+            <a href="myGroups.html"><img src="gruppe.jpg" alt="MEINE GRUPPE"></a>
+        </div>
+        <div class="action-3">
+            <a href="myProfile.html"><img src="Download.png" alt="PROFIL"></a>
+          </div>
+        <div class="action-4">
+            <a href="chats.html"><img src="chat.jpg" alt="CHAT"></a>
+        </div>
+      </div>
+
+  </section>
 </body>
 
 </html>
