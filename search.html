@@ -7,28 +7,75 @@
     
         .head {
             
-            background-color: yellow;
-            font-size: 20px;
+            background-color: #ffd700;
+            font-size: 50pt;
             text-align: center;
-            font-family: Arial
-            width: 40%;
-      		padding: 8px;
-        	position: center
+            font-family: Lucida Sans;
+            width: 20%;
+      	    padding: 8px;
+            margin: auto;
+	    margin-bottom: 2%;
+	    margin-top: 8%
       		
             
             
         }
         
-        .input {
+	
+	.td {
+  	  display: table-cell;
+  	  vertical-align: middle;
+	}
+
+	 .input {
             
-            padding: 8px;
-            display: block;
-            border: 2px solid black;
-            width: 40%;
-            position: center
+  
+            border: none;
+            margin: auto;
+	    width: 100%;
+	    height: 100%;
+	    font-family: Lucida Sans;
+	    font-size: 24px;
+	    margin-left: 0px;
             
             
         }
+
+
+        input:focus {
+            
+  
+            outline: none;
+            
+	    
+            
+            
+        }
+
+	.input_border {
+            
+            padding: 8px;
+            display: table;
+            border: 2px solid black;
+            width: 46%;
+	    height: 20px;
+            margin: auto;
+	    border-radius: 14px
+            
+            
+        }
+
+
+	.icon {
+
+		
+		width: 20px;
+
+
+	}
+
+	
+	
            
     </style>
 
@@ -42,8 +89,13 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
     <div class="head" >Search</div>
-    <input class="input" name="input_search" ></input>
+    <div class="input_border" name="input_search" ><div class="td"><img src="lupe.png" class="icon" ></img></div><div class="td"><input name="input_search" class="input"></input></div></div>
     
 </body>
+
+
+<footer>
+<div style="display: none" >Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
 
 </html>
