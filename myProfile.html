@@ -87,6 +87,10 @@
     <!-- JavaScript ---------------------------------------------------->
     <script>
 
+        function goBack(){
+            window.history.back();
+        }
+
     </script>
 
 </head>
@@ -95,8 +99,8 @@
 <body>
 
     <div id="topButtons">
-        <input id="backButton" type="image" src="icons/west-24px.svg" />
-        <input id="editButton" type="image" src="icons/edit-24px.svg" />
+        <input id="backButton" type="image" src="icons/west-24px.svg" onclick="goBack()" />
+        <input id="editButton" type="image" src="icons/edit-24px.svg" onclick="location.href='editProfil.html';" />
     </div>
 
     <div id="profile">
