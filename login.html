@@ -5,6 +5,60 @@
     <!-- CSS ----------------------------------------------------------->
     <style>
 
+        *{
+            font-family: "Lucida Sans", sans-serif;
+        }
+
+        .header{
+            font-size: 50pt;
+            font-weight: bold;
+            background-color: #ffd700;
+            padding: 50pt;
+            justify-content: center;
+            text-align: center;
+            width: 60%;
+            margin: 40pt auto 30pt auto;
+        }
+
+        .login{
+            justify-content: center;
+            text-align: center;
+        }
+
+        .name{
+            font-size: 20pt;
+            margin: 0 auto 10pt auto;
+        }
+
+        .password{
+            font-size: 20pt;
+            margin: 0 auto 25pt auto;
+        }
+
+        .loginButton{
+            background-color: #008000;
+            font-size: 20pt;
+            font-weight: bold;
+            width: 100pt;
+            padding: 5pt;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+        }
+
+        .loginButton:hover{
+            background-color: #329932;
+        }
+
+        #passwd{
+            font-size: 20pt;
+        }
+
+        #name{
+            font-size: 20pt;
+        }
+
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
@@ -16,7 +70,23 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+    <div class="header"> Study Group Finder </div>
+
+    <div class="login">
+        <div class="name">
+            <label for="name">Name: &nbsp &nbsp </label>
+            <input id="name" size="30" maxlength="40" placeholder="Name" required>
+        </div>
+
+        <div class="password"> 
+            <label for="passwd">Passwort:</label>  
+            <input type="password" id="passwd" size="30" maxlength="40" required>
+        </div>
+
+        <div class="loginButton">
+            Login
+        </div>
+    </div>
 
 </body>
-
 </html>
