@@ -20,12 +20,66 @@
             
             
         }
-        
+
+	.group_table {
 	
+		display: table;
+		width: 46%;
+		padding: 8px;
+		margin: auto;
+
+	}
+
+	a {
+
+
+		color: black;
+		text-decoration: none;
+
+	}
+
+        .tu {
+	  display: table-row;
+          
+	}
+
+	.group {
+	
+	    display: table;
+	    font-family: Lucida Sans;
+	    font-size: 24px;
+	    padding: 10px 0px;
+	    width: 100%;
+	    margin: auto;
+
+	}
+	
+	.td_group {
+  	  display: table-cell;
+  	  vertical-align: left;
+	
+	}
+
+	.td_group_id {
+  	  display: table-cell;
+  	  vertical-align: middle;
+	  color: black;
+	  padding-right: 20px;
+	}
+
+	.td_group_number {
+  	  display: table-cell;
+  	  vertical-align: middle;
+	  color: blue;
+         
+	}
+
 	.td {
   	  display: table-cell;
   	  vertical-align: middle;
 	}
+
+	
 
 	 .input {
             
@@ -68,8 +122,25 @@
 
 	.icon {
 
-		
+		background-image: url("lupe.png");
+		background-size: 20px 20px;
 		width: 20px;
+		height: 20px;
+		border: none;
+		background-color: white;
+
+
+	}
+
+	.icon:focus {
+
+		background-image: url("lupe.png");
+		background-size: 20px 20px;
+		width: 20px;
+		height: 20px;
+		border: none;
+		background-color: white;
+		outline: none;
 
 
 	}
@@ -80,7 +151,19 @@
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
+
+
+	
+	
+
     <script>
+
+	function show_groups(){
+	
+		document.getElementById("group1").style.display = "table";
+
+
+	}
 
     </script>
 
@@ -89,8 +172,11 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
     <div class="head" >Search</div>
-    <div class="input_border" name="input_search" ><div class="td"><img src="lupe.png" class="icon" ></img></div><div class="td"><input name="input_search" class="input"></input></div></div>
-    
+    <div class="input_border" name="input_search" ><div class="td"><button onclick="show_groups()" class="icon" ></button></div><div class="td"><input name="input_search" class="input"></input></div></div>
+    <div class="group_table" id="group1" style="display: none" >
+	<div class="tu"><div class="group"><div class="td_group_id" >1</div><div class="td_group" ><a href="hallo" >Die Informierer</a></div><div class="td_group_number" >3/4</div></div></div>
+	<div class="tu"><div class="group"><div class="td_group_id" >2</div><div class="td_group" ><a href="hallo2" >Andere Gruppe</a></div><div class="td_group_number" >2/4</div></div></div>
+    </div>
 </body>
 
 

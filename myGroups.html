@@ -5,10 +5,120 @@
     <!-- CSS ----------------------------------------------------------->
     <style>
 
+        li {list-style-type: none;}
+
+        html, body {
+            text-align: left;
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: "Lucida Sans", sans-serif;
+            font-size: 24pt;
+        }
+
+        #backButton {
+            margin: 100px;
+            float: left;
+            width: 60px;
+            height: 60px;
+        }
+
+        #groups h1 {
+            background: #ffd700;
+            padding: 20px;
+            width: 50%;
+            font-size: 50pt;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #topButtons {
+            height: 200px;
+        }
+
+        #group1 {
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        #group1 h1 {
+            font-size: 50px;
+        }
+
+        #group1 h3 {
+            color: blue;
+        }
+
+        #group2 {
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #group2 h1 {
+            font-size: 50px;
+        }
+
+        #group2 h3 {
+            color: blue;
+        }
+
+        #group3 {
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #group3 h1 {
+            font-size: 50px;
+        }
+
+        #group3 h3 {
+            color: red;
+        }
+
+        #createGroup{
+            margin: 0 auto;
+            display: block;
+            font-size: 60px;
+            color: green;
+            border: solid 5px green;
+            background-color: lightgreen;
+        }
+
+
+        .phone-12-cols{width:100%;}
+
+        @media only screen and (min-width: 750px) {
+            .desktop-1-cols {width: 8.33%;}
+            .desktop-2-cols {width: 16.66%;}
+            .desktop-3-cols {width: 25.00%;}
+            .desktop-4-cols {width: 33.33%;}
+            .desktop-5-cols {width: 41.66%;}
+            .desktop-6-cols {width: 50.00%;}
+            .desktop-7-cols {width: 58.33%;}
+            .desktop-8-cols {width: 66.66%;}
+            .desktop-9-cols {width: 75.00%;}
+            .desktop-10-cols {width: 83.33%;}
+            .desktop-11-cols {width: 91.66%;}
+            .desktop-12-cols {width: 100.00%;}
+        }
+
+        .flex-container { 
+            display:-webkit-flex;
+            display: flex; 
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap; 
+        }
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
     <script>
+
+        function goBack(){
+            window.history.back();
+        }
 
     </script>
 
@@ -16,6 +126,51 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+
+    <div id="topButtons">
+        <input id="backButton" type="image" src="icons/west-24px.svg" onclick="goBack()" />
+    </div>
+
+    <div id="groups">
+        <h1>Meine Gruppen</h1>
+    </div>
+
+    <ul>
+        <li>
+            <div id="group1" class="flex-container">
+                    <div class="pad phone-12-cols desktop-2-cols"></div>
+                    <div class="groupNo phone-12-cols desktop-1-cols"><h2>1</h2></div>
+                    <div class="groupIcon phone-12-cols desktop-1-cols"><img src="icons/group.png" ></div>
+                    <div class="groupName phone-12-cols desktop-4-cols"><h1>Die Informierer</h1></div>
+                    <div class="groupMembers phone-12-cols desktop-2-cols"><h3>3/4</h3></div>
+                    <div class="pad phone-12-cols desktop-2-cols"></div>
+            </div> 
+        </li>
+        <li>
+            <div id="group2" class="flex-container">
+                    <div class="pad phone-12-cols desktop-2-cols"></div>
+                    <div class="groupNo phone-12-cols desktop-1-cols"><h2>2</h2></div>
+                    <div class="groupIcon phone-12-cols desktop-1-cols"><img src="icons/group.png" ></div>
+                    <div class="groupName phone-12-cols desktop-4-cols"><h1>HCI-Lerngruppe</h1></div>
+                    <div class="groupMembers phone-12-cols desktop-2-cols"><h3>2/8</h3></div>
+                    <div class="pad phone-12-cols desktop-2-cols"></div>
+            </div> 
+        </li>
+        <li>
+            <div id="group3" class="flex-container">
+                    <div class="pad phone-12-cols desktop-2-cols"></div>
+                    <div class="groupNo phone-12-cols desktop-1-cols"><h2>3</h2></div>
+                    <div class="groupIcon phone-12-cols desktop-1-cols"><img src="icons/group.png" ></div>
+                    <div class="groupName phone-12-cols desktop-4-cols"><h1>Landburschen</h1></div>
+                    <div class="groupMembers phone-12-cols desktop-2-cols"><h3>12/12</h3></div>
+                    <div class="pad phone-12-cols desktop-2-cols"></div>
+            </div> 
+        </li>
+    </ul>
+
+    <div>
+        <button id="createGroup" onClick="location.href='createGroup.html'">Neue Gruppe Erstellen</button>
+    </div>
 
 </body>
 
