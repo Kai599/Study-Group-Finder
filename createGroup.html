@@ -5,6 +5,88 @@
     <!-- CSS ----------------------------------------------------------->
     <style>
 
+    body {
+        margin: 0;
+        padding:0;
+        font-family: sans-serif;
+    }
+
+    *{
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    }
+
+    .main{
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+     .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+    }
+
+    .header{
+      align-items:baseline;
+      justify-content: baseline;
+      font-size: 80px;
+      background-color: #ffd700;
+    }
+
+    .action-1 p, input{
+      font-size: 50px;
+    }
+
+    .action-1 p{
+      text-decoration: underline;
+
+    }
+
+    .action-2 p, textarea{
+      font-size: 50px;
+    }
+
+    .action-3{
+      font-size: 50px;
+    }
+
+    p{
+      margin-top:0;
+    }
+
+    .action-4{
+      display: flex;
+      justify-content:space-between;
+    }
+
+    .action-4 div{
+      width: 200px;
+      height: 100px;
+
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    #back{
+      background-color: red;
+      font-size: 50px;
+    }
+
+    #erstellen{
+      background-color: green;
+      font-size: 50px;
+    }
+
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
@@ -16,6 +98,33 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+
+  <section class="main">
+
+    <div class="header">
+    <p>Neue Gruppe</p>
+    </div>
+
+      <div class="container">
+        <div class="action-1">
+          <p>Gruppenname:</p>
+          <input type="text" name="name" placeholder="Gruppenname">
+        </div>
+        <div class="action-2">
+          <p>Beschreibung:</p>
+          <textarea name="name" rows="5" cols="60"></textarea>
+        </div>
+        <div class="action-3">
+          <p>Max Teilnehmer:</p>
+          <input type="number" name="name" placeholder="Anzahl">
+          </div>
+        <div class="action-4">
+            <div id="back">Zurück</div>
+            <div id="erstellen">Erstellen</div>
+        </div>
+      </div>
+
+  </section>
 
 </body>
 
