@@ -5,6 +5,83 @@
     <!-- CSS ----------------------------------------------------------->
     <style>
 
+        html, body {
+            text-align: left;
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: "Lucida Sans", sans-serif;
+            font-size: 24pt;
+        }
+
+        #editButton {
+            margin: 100px;
+            float: right;
+            width: 60px;
+            height: 60px;
+        }
+
+        #backButton {
+            margin: 100px;
+            float: left;
+            width: 60px;
+            height: 60px;
+        }
+
+        #profile h1 {
+            background: #ffd700;
+            padding: 20px;
+            width: 50%;
+            font-size: 50pt;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #topButtons {
+            height: 200px;
+        }
+
+        #infos {
+            margin-top: 80px;
+        }
+
+        #infos h1 {
+            text-decoration: underline;
+        }
+
+        #profilePic {
+            height: 200px;
+            width: auto;
+            border: solid 5px black;
+        }
+
+
+        .phone-12-cols{width:100%;}
+
+        @media only screen and (min-width: 750px) {
+            .desktop-1-cols {width: 8.33%;}
+            .desktop-2-cols {width: 16.66%;}
+            .desktop-3-cols {width: 25.00%;}
+            .desktop-4-cols {width: 33.33%;}
+            .desktop-5-cols {width: 41.66%;}
+            .desktop-6-cols {width: 50.00%;}
+            .desktop-7-cols {width: 58.33%;}
+            .desktop-8-cols {width: 66.66%;}
+            .desktop-9-cols {width: 75.00%;}
+            .desktop-10-cols {width: 83.33%;}
+            .desktop-11-cols {width: 91.66%;}
+            .desktop-12-cols {width: 100.00%;}
+        }
+
+        .flex-container { 
+            display:-webkit-flex;
+            display: flex; 
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap; 
+        }
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
@@ -16,6 +93,30 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+
+    <div id="topButtons">
+        <input id="backButton" type="image" src="icons/west-24px.svg" />
+        <input id="editButton" type="image" src="icons/edit-24px.svg" />
+    </div>
+
+    <div id="profile">
+        <h1>MEIN PROFIL</h1>
+    </div>
+
+    <div id="infos" class="flex-container">
+        <div class="pad phone-12-cols desktop-2-cols"></div>
+        <div class="image phone-12-cols desktop-2-cols">
+            <img id="profilePic" src="icons/kai-profile.png" alt="Profilbild">
+        </div>
+        <div id="icon" class="aboutMe phone-12-cols desktop-6-cols">
+            <h1>KAI KÖLLEMANN</h1>
+            <h2>21 Jahre</h2>
+            <h2>Studiert Informatik</h2>
+            <h2>Über mich:</h2>
+            <p>Hallo, ich bin immer auf der Suche nach tollen neuen Freunden und Gruppen. Meldet euch bei mir!</p>
+        </div>
+        <div class="pad phone-12-cols desktop-2-cols"></div>
+    </div>
 
 </body>
 
