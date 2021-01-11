@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <link rel="stylesheet" href="styles.css">
     <!-- CSS ----------------------------------------------------------->
     <style>
 
@@ -16,13 +16,6 @@
             box-sizing: border-box;
             font-family: "Lucida Sans", sans-serif;
             font-size: 24pt;
-        }
-
-        #backButton {
-            margin: 100px;
-            float: left;
-            width: 60px;
-            height: 60px;
         }
 
         #groups h1 {
@@ -127,13 +120,13 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
 
-    <div id="topButtons">
-        <input id="backButton" type="image" src="icons/west-24px.svg" onclick="goBack()" />
-    </div>
-
-    <div id="groups">
-        <h1>Meine Gruppen</h1>
-    </div>
+    <div class="siteHeader">
+        <h1>MEINE GRUPPEN</h1>
+        <div class="button" id="backButton">
+            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+            <p>Zurück</p>
+        </div>
+      </div>
 
     <ul>
         <li>

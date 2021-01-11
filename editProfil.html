@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles.css">
 
     <!-- CSS ----------------------------------------------------------->
     <style>
@@ -14,36 +15,6 @@
             box-sizing: border-box;
             font-family: "Lucida Sans", sans-serif;
             font-size: 24pt;
-        }
-
-        #saveButton {
-            margin: 100px;
-            float: right;
-            height: 60px;
-            background: lightgreen;
-            border: solid 5px green;
-            border-radius: 5;
-            color: green;
-        }
-
-        #backButton {
-            margin: 100px;
-            float: left;
-            width: 60px;
-            height: 60px;
-        }
-
-        #profile h1 {
-            background: #ffd700;
-            padding: 20px;
-            width: 50%;
-            font-size: 50pt;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        #topButtons {
-            height: 200px;
         }
 
         #infos {
@@ -66,6 +37,11 @@
             height: 400px;
             text-align: left;
             vertical-align: text-top;
+        }
+
+        #saveButton {
+            flex: 0 1 auto;
+            margin-left: auto;
         }
 
 
@@ -105,13 +81,15 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
 
-    <div id="topButtons">
-        <input id="backButton" type="image" src="icons/west-24px.svg" onclick="location.href='myProfile.html'" />
-        <button id="saveButton" onclick="location.href='myProfile.html'" >OK</button>
-    </div>
-
-    <div id="profile">
+    <div class="siteHeader">
+        <div class="button" id="backButton">
+            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+            <p>Zurück</p>
+        </div>
         <h1>PROFIL BEARBEITEN</h1>
+        <div class="button" id="saveButton">
+            <h2>OK</h2>
+        </div>
     </div>
 
     <div id="infos" class="flex-container">
