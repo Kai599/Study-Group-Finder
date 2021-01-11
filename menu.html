@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <link rel="stylesheet" href="styles.css">
     <!-- CSS ----------------------------------------------------------->
     <style>
 
@@ -38,12 +38,10 @@ color: white;
       font-size: 80px;
     }
 
-     .logout{
-      float: right;
-      width: 50px;
-      height: 50px;
-      padding: 0;
-    }
+    #logoutButton {
+       flex: 0 1 auto;
+       margin-left: auto;
+   }
 
     .container{
       display: flex;
@@ -87,10 +85,14 @@ color: white;
 
 <!-- HTML --------------------------------------------------------------->
 <body>
-  <a href="login.html"><img class="logout" src="Logout.png" alt="Logout"></a>
-<nav class="header-nav">
-<p class="logo">Finder</p>
-</nav>
+
+    <div class="siteHeader">
+        <h1>FINDER</h1>
+        <div class="button" id="logoutButton">
+            <input type="image" src="icons/power_settings_new-24px.svg" onclick="goBack()" />
+            <p>Logout</p>
+        </div>
+    </div>
 
 <div class="container">
   <div class="action-1">
