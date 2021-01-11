@@ -4,10 +4,20 @@
 
     <!-- CSS ----------------------------------------------------------->
     <style>
-    
+
+    html{
+      background-size: cover;
+      background-image: url("icons/black.jpg");
+      height: 100vh;
+    }
+
+    body {
+        margin: 0;
+        padding:0;
+        font-family: sans-serif;
+    }
+
         .head {
-            
-            background-color: #ffd700;
             font-size: 50pt;
             text-align: center;
             font-family: Lucida Sans;
@@ -16,74 +26,15 @@
             margin: auto;
 	    margin-bottom: 2%;
 	    margin-top: 8%
-      		
-            
-            
         }
 
-	.group_table {
-	
-		display: table;
-		width: 46%;
-		padding: 8px;
-		margin: auto;
-
-	}
-
-	a {
-
-
-		color: black;
-		text-decoration: none;
-
-	}
-
-        .tu {
-	  display: table-row;
-          
-	}
-
-	.group {
-	
-	    display: table;
-	    font-family: Lucida Sans;
-	    font-size: 24px;
-	    padding: 10px 0px;
-	    width: 100%;
-	    margin: auto;
-
-	}
-	
-	.td_group {
-  	  display: table-cell;
-  	  vertical-align: left;
-	
-	}
-
-	.td_group_id {
-  	  display: table-cell;
-  	  vertical-align: middle;
-	  color: black;
-	  padding-right: 20px;
-	}
-
-	.td_group_number {
-  	  display: table-cell;
-  	  vertical-align: middle;
-	  color: blue;
-         
-	}
 
 	.td {
   	  display: table-cell;
   	  vertical-align: middle;
 	}
 
-	
-
 	 .input {
-            
-  
             border: none;
             margin: auto;
 	    width: 100%;
@@ -91,23 +42,14 @@
 	    font-family: Lucida Sans;
 	    font-size: 24px;
 	    margin-left: 0px;
-            
-            
         }
 
 
         input:focus {
-            
-  
             outline: none;
-            
-	    
-            
-            
         }
 
 	.input_border {
-            
             padding: 8px;
             display: table;
             border: 2px solid black;
@@ -115,55 +57,60 @@
 	    height: 20px;
             margin: auto;
 	    border-radius: 14px
-            
-            
         }
 
 
 	.icon {
-
-		background-image: url("lupe.png");
-		background-size: 20px 20px;
 		width: 20px;
-		height: 20px;
-		border: none;
-		background-color: white;
-
-
 	}
 
-	.icon:focus {
+.navbar{
+  width: 100%;
+  height: 70px;
+  margin: 0;
+}
 
-		background-image: url("lupe.png");
-		background-size: 20px 20px;
-		width: 20px;
-		height: 20px;
-		border: none;
-		background-color: white;
-		outline: none;
+.navbar img{
+  height: 70px;
+  width: 50px;
+  background-color: white;
+}
 
+.navbar a{
+  padding: 2rem;
+}
 
-	}
+.logo{
+  padding-left: 20px;
+}
 
-	
-	
-           
+.logo p{
+  float: left;
+    color: white;
+  font-size: 50px;
+}
+.container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+width: 50%;
+float: right;
+}
+
+.head p{
+  color: white;
+}
+
+.active{
+  border-radius: 1px;
+  border-style: solid;
+  border-color: red;
+}
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
-
-
-	
-	
-
     <script>
-
-	function show_groups(){
-	
-		document.getElementById("group1").style.display = "table";
-
-
-	}
 
     </script>
 
@@ -171,12 +118,36 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
-    <div class="head" >Search</div>
-    <div class="input_border" name="input_search" ><div class="td"><button onclick="show_groups()" class="icon" ></button></div><div class="td"><input name="input_search" class="input"></input></div></div>
-    <div class="group_table" id="group1" style="display: none" >
-	<div class="tu"><div class="group"><div class="td_group_id" >1</div><div class="td_group" ><a href="/group.html" >Die Informierer</a></div><div class="td_group_number" >3/4</div></div></div>
-	<div class="tu"><div class="group"><div class="td_group_id" >2</div><div class="td_group" ><a href="/" >Andere Gruppe</a></div><div class="td_group_number" >2/4</div></div></div>
+
+  <div class="logo">
+    <a href="menu.html">
+      <p>Finder</p>
+    </a>
+  </div>
+<nav class="navbar">
+
+  <div class="container">
+    <a href="search.html">
+      <img src="lupe.png" alt="Search" class="active">
+    </a>
+    <a href="myGroups.html">
+      <img src="gruppe.jpg" alt="Meine Gruppen">
+    </a>
+    <a href="myProfile.html">
+      <img src="Download.png" alt="Profil">
+    </a>
+    <a href="chats.html">
+      <img src="chat.jpg" alt="Chat">
+    </a>
+  </div>
+
     </div>
+  </div>
+</nav>
+
+    <div class="head" ><p>Search</p></div>
+    <div class="input_border" name="input_search" ><div class="td"><img src="lupe.jpg" class="icon" ></img></div><div class="td"><input name="input_search" class="input"></input></div></div>
+
 </body>
 
 
