@@ -6,13 +6,22 @@
     <style>
 
         *{
+          box-sizing: border-box;
+          outline: none;
+          text-decoration: none;
             font-family: "Lucida Sans", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding:0;
+            font-family: sans-serif;
         }
 
         .header{
             font-size: 50pt;
             font-weight: bold;
-            background-color: #ffd700;
+
             padding: 50pt;
             justify-content: center;
             text-align: center;
@@ -21,18 +30,24 @@
         }
 
         .login{
-            justify-content: center;
-            text-align: center;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          flex-direction: column;
+          height: 600px;
         }
 
         .name{
             font-size: 20pt;
-            margin: 0 auto 10pt auto;
+            margin: 10% auto 10pt auto;
+            color: white;
         }
 
         .password{
             font-size: 20pt;
             margin: 0 auto 25pt auto;
+            color: white;
         }
 
         .loginButton{
@@ -52,10 +67,25 @@
 
         #passwd{
             font-size: 20pt;
+            margin-bottom: 10%;
         }
 
         #name{
             font-size: 20pt;
+            margin-bottom: 10%;
+
+        }
+
+        html{
+          background-size: cover;
+          background-image: url("backgrounds/Login-Background.jpg");
+          height: 100vh;
+        }
+
+        .container{
+          width: 30%;
+          height: 95%;
+          background-color: black ;
         }
 
 
@@ -70,23 +100,33 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+  <form action="menu.html" method="post">
+
+
     <div class="header"> Study Group Finder </div>
 
     <div class="login">
+      <div class="container">
         <div class="name">
-            <label for="name">Name: &nbsp &nbsp </label>
-            <input id="name" size="30" maxlength="40" placeholder="Name" required>
+            <label for="name">Name: &nbsp &nbsp </label> <br>
+            <input id="name" size="20" maxlength="40" placeholder="Name" style="height: 70px;" required>
         </div>
 
-        <div class="password"> 
-            <label for="passwd">Passwort:</label>  
-            <input type="password" id="passwd" size="30" maxlength="40" required>
+        <div class="password">
+            <label for="passwd">Passwort:</label><br>
+            <input type="password" id="passwd" placeholder="Passwort" style="height: 70px;" size="20" maxlength="40" required>
         </div>
 
-        <a href="menu.html">
-            <button class="loginButton" type="button"> Login </button>
-        </a>
+        <button type="submit" class="loginButton">
+            Login
+        </button>
+      </div>
+
     </div>
+
+
+  </form>
+
 
 </body>
 </html>
