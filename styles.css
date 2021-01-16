@@ -7,6 +7,58 @@ html{
     background-color: #F5F5F5;
 }
 
+/* ===Nav-Leiste=== */
+
+.navbar{
+  width: 100%;
+  height: 110px;
+  margin: 0;
+  background-color: #B0B0B0;
+}
+
+.logo{
+  padding-left: 2rem;
+}
+
+.logo p{
+  float: left;
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
+  height: 100%;
+    margin: 0;
+    padding-top: 1%;
+    padding-left: 2%;
+}
+.nav-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-end;
+width: 50%;
+height: 100%;
+float: right;
+}
+
+.active > p{
+color: #990000;
+}
+
+.nav-container > a{
+  margin: 20px;
+  font-size: 24pt;
+  color: black;
+}
+
+.nav-container > a > p{
+font-weight: bold;
+}
+
+
+
+
+/* ===Header=== */
+
 .siteHeader {
     display: flex;
     flex-wrap: nowrap;
