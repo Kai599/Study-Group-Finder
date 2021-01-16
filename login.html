@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- CSS ----------------------------------------------------------->
     <style>
 
         *{
-          box-sizing: border-box;
-          outline: none;
-          text-decoration: none;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
             font-family: "Lucida Sans", sans-serif;
         }
 
@@ -30,62 +30,84 @@
         }
 
         .login{
-          display: flex;
-          justify-content: center;
-          text-align: center;
-          align-items: center;
-          flex-direction: column;
-          height: 600px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            height: 600px;
         }
 
         .name{
             font-size: 20pt;
-            margin: 10% auto 10pt auto;
+            margin: 0 auto;
             color: white;
         }
 
         .password{
             font-size: 20pt;
-            margin: 0 auto 25pt auto;
+            margin: 0  auto;
             color: white;
         }
 
         .loginButton{
-            background-color: #008000;
+            background-color: #329932;
             font-size: 20pt;
             font-weight: bold;
-            width: 100pt;
-            padding: 5pt;
+            width: 70%;
+            padding: 10px;
             justify-content: center;
             text-align: center;
             margin: auto;
+            border-radius: 30px;
+            border: 5px solid green;
+            color: #002600
         }
 
         .loginButton:hover{
-            background-color: #329932;
+            background-color: lightgreen;
+        }
+
+        input[type="password"] textarea {
+            background-color: white;
         }
 
         #passwd{
+            width: 70%;
+            background-color: white;
             font-size: 20pt;
             margin-bottom: 10%;
+            border-radius: 30px;
+            padding: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 5px solid lightgray;
         }
 
         #name{
+            width: 70%;
             font-size: 20pt;
             margin-bottom: 10%;
-
+            border-radius: 30px;
+            padding: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 5px solid lightgray;
         }
 
+
         html{
-          background-size: cover;
-          background-image: url("icons/Login-Background.jpg");
-          height: 100vh;
+            background-size: cover;
+            background-image: url("icons/Login-Background.jpg");
+            height: 100vh;
         }
 
         .container{
-          width: 30%;
-          height: 95%;
-          background-color: rgba(0,0,0,0.6);
+            width: 30%;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            background-color: rgba(0,0,0,0.6);
+            border-radius: 30px;
         }
 
 
@@ -110,13 +132,11 @@
     <div class="login">
       <div class="container">
         <div class="name">
-            <label for="name">Name: &nbsp &nbsp </label> <br>
-            <input id="name" size="20" maxlength="40" placeholder="Name" style="height: 70px;" required>
+            <input id="name" size="20" maxlength="40" placeholder="Name"  required>
         </div>
 
         <div class="password">
-            <label for="passwd">Passwort:</label><br>
-            <input type="password" id="passwd" placeholder="Passwort" style="height: 70px;" size="20" maxlength="40" required>
+            <input type="password" id="passwd" placeholder="Passwort" size="20" maxlength="40" required>
         </div>
 
         <button type="submit" class="loginButton">
