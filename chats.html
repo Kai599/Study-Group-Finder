@@ -121,6 +121,10 @@
             font-size: 20pt;
         }
 
+        #startPartner {
+            background-color: #ead3d5;
+        }
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
@@ -170,6 +174,10 @@
             currentChatPartner = partnerLi.innerHTML;
 
             clearMessages();
+            removePartnerHighlight();
+
+            partnerLi.style.background = "#ead3d5";
+
             var messageArray = messagesTo[currentChatPartner];
             if (messageArray == undefined) messageArray = [];
 
@@ -179,7 +187,13 @@
             }
         } 
 
-
+        function removePartnerHighlight(){
+            const partnerList = document.getElementById("chatPartners");
+            var partnerLis = partnerList.children;
+            for (var i = 0; i < partnerLis.length; i++){
+                partnerLis[i].style.background = "white";
+            }
+        }
 
     </script>
 
@@ -199,8 +213,8 @@
     <div id="chatApp">
         <div id="contacts">
             <h1>Kontakte</h1>
-            <ul>
-                <li onclick="changeChatPartner(event);" >Kai</li>
+            <ul id="chatPartners">
+                <li onclick="changeChatPartner(event);" id="startPartner" >Kai</li>
                 <li onclick="changeChatPartner(event);" >Magnus</li>
                 <li onclick="changeChatPartner(event);" >Lukas</li>
             </ul>
