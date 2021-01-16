@@ -98,11 +98,11 @@
             .desktop-12-cols {width: 100.00%;}
         }
 
-        .flex-container { 
+        .flex-container {
             display:-webkit-flex;
-            display: flex; 
+            display: flex;
             -webkit-flex-wrap: wrap;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
         }
 
     </style>
@@ -121,6 +121,32 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
 
+
+  <nav class="navbar">
+
+    <div class="logo">
+      <a href="menu.html">
+        <p>Finder</p>
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <a href="search.html">
+        <p>Suche</p>
+      </a>
+      <a href="myGroups.html">
+        <p>Gruppen</p>
+      </a>
+      <a href="myProfile.html">
+        <p>Profil</p>
+      </a>
+      <a href="chats.html" class="active">
+        <p>Chat</p>
+      </a>
+    </div>
+  </nav>
+
+
     <div class="siteHeader">
         <h1>MEINE GRUPPEN</h1>
         <div class="button" id="backButton">
@@ -138,7 +164,7 @@
                     <div class="groupName phone-12-cols desktop-4-cols"><h1>Die Informierer</h1></div>
                     <div class="groupMembers phone-12-cols desktop-2-cols"><h3>3/4</h3></div>
                     <div class="pad phone-12-cols desktop-2-cols"></div>
-            </div> 
+            </div>
         </li>
         <li>
             <div id="group2" class="flex-container" onclick="location.href='hci_lerngruppe.html'">
@@ -148,7 +174,7 @@
                     <div class="groupName phone-12-cols desktop-4-cols"><h1>HCI-Lerngruppe</h1></div>
                     <div class="groupMembers phone-12-cols desktop-2-cols"><h3>2/8</h3></div>
                     <div class="pad phone-12-cols desktop-2-cols"></div>
-            </div> 
+            </div>
         </li>
         <li>
             <div id="group3" class="flex-container" onclick="location.href='landburschen_gruppe.html'">
@@ -158,7 +184,7 @@
                     <div class="groupName phone-12-cols desktop-4-cols"><h1>Landburschen</h1></div>
                     <div class="groupMembers phone-12-cols desktop-2-cols"><h3>12/12</h3></div>
                     <div class="pad phone-12-cols desktop-2-cols"></div>
-            </div> 
+            </div>
         </li>
     </ul>
 
