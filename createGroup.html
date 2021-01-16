@@ -8,7 +8,7 @@
     body {
         margin: 0;
         padding:0;
-        font-family: sans-serif;
+        font-family: "Lucida Sans",sans-serif;
     }
 
     *{
@@ -17,20 +17,10 @@
     text-decoration: none;
     }
 
-    .main{
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
      .container{
       display: flex;
-      align-items: center;
-      justify-content: space-around;
-      flex-direction: column;
-      flex-wrap: wrap;
+      flex-direction: row;
+       justify-content: space-between;
       width: 100%;
       height: 100%;
     }
@@ -42,21 +32,8 @@
       background-color: #ffd700;
     }
 
-    .action-1 p, input{
-      font-size: 50px;
-    }
-
-    .action-1 p{
-      text-decoration: underline;
-
-    }
-
     .action-2 p, textarea{
-      font-size: 50px;
-    }
-
-    .action-3{
-      font-size: 50px;
+      font-size: 30px;
     }
 
     p{
@@ -65,25 +42,67 @@
 
     .action-4{
       display: flex;
-      justify-content:space-between;
+
     }
 
     .action-4 div{
-      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
       height: 100px;
+      border-radius: 20px;
 
       margin-left: 50px;
       margin-right: 50px;
     }
 
     #back{
-      background-color: red;
+      background-color: #ff3f3f;
       font-size: 50px;
+      border: solid 5px red;
+    }
+    #back:hover{
+      background-color: red;
+
     }
 
     #erstellen{
-      background-color: green;
+      background-color: lightgreen;
       font-size: 50px;
+      border: solid 5px green;
+    }
+
+    #erstellen:hover{
+      background-color: green;
+    }
+
+    .leftside{
+      margin-top: 50px;
+      margin-left:150px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .rightside{
+      margin-top: 50px;
+      margin-right:150px;
+
+    }
+
+    .leftside > [class|="action"] > p , input{
+      font-size: 40px;
+    }
+    .leftside > [class|="action"] > input{
+      margin-bottom: 30px;
+    }
+
+    .action-2{
+      margin-bottom: 150px;
+    }
+    p{
+      margin:0;
+      text-decoration: underline;
     }
 
 
@@ -102,33 +121,41 @@
   <div class="siteHeader">
     <h1>NEUE GRUPPE</h1>
     <div class="button" id="backButton">
-        <input type="image" src="icons/west-24px.svg" onclick="location.href='myGroups.html'" />
+        <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
         <p>Zurück</p>
     </div>
   </div>
 
-  <section class="main">
 
       <div class="container">
-        <div class="action-1">
-          <p>Gruppenname:</p>
-          <input type="text" name="name" placeholder="Gruppenname">
-        </div>
-        <div class="action-2">
-          <p>Beschreibung:</p>
-          <textarea name="name" rows="5" cols="60"></textarea>
-        </div>
-        <div class="action-3">
-          <p>Max Teilnehmer:</p>
-          <input type="number" name="name" placeholder="Anzahl">
+        <div class="leftside">
+          <div class="action-1">
+            <p>Gruppenname:</p><br>
+            <input type="text" name="name" placeholder="Gruppenname">
           </div>
-        <div class="action-4">
-            <div id="back">Zurück</div>
-            <div id="erstellen">Erstellen</div>
+          <div class="action-3">
+            <p>Max Teilnehmer:</p><br>
+            <input type="number" name="name" placeholder="Anzahl">
+            </div>
+            <div class="action-5">
+              <p>Fachrichtung:</p><br>
+              <input type="text" name="name" placeholder="Fachrichtung">
+              </div>
         </div>
+        <div class="rightside">
+          <div class="action-2">
+            <p>Beschreibung:</p><br>
+            <textarea name="name" rows="6" cols="50"></textarea>
+          </div>
+          <div class="action-4">
+              <div id="back">Abbrechen</div>
+              <div id="erstellen">Erstellen</div>
+          </div>
+        </div>
+
       </div>
 
-  </section>
+
 
 </body>
 
