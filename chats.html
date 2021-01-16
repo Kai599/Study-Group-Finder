@@ -8,132 +8,178 @@
         *{
             box-sizing: border-box;
             font-family: "Lucida Sans", sans-serif;
+            overflow: hidden;
+        }
+
+        .siteHeader {
+            margin-bottom: 50px;
         }
         
-        .flex-container {
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-            flex-wrap: wrap;
-            background: rgba(255, 215, 100, 0.4) ;
-            padding: 20pt;
-            justify-content: center;
-            text-align: center;
-            height: 600pt;
-            position: relative;
-            margin-left: 30pt;
-            margin-right: 30pt;
-        }           
-
-        .header{
-            font-size: 50pt;
-            font-weight: bold;
-            background-color: #ffd700;
-            padding: 40pt;
-            justify-content: center;
-            text-align: center;
-            width: 50%;
-            margin: 40pt auto 30pt auto;
+        #chatApp {
+            margin: 0 auto;
+            width: 90%;
+            height: 600px;
         }
 
-        /* Phones: */
-        .phone-12-cols {width: 100%;}
-
-        /* Desktop: */
-        @media only screen and (min-width: 750px) {
-            .desktop-1-cols {width: 8.33%;}
-            .desktop-2-cols {width: 16.66%;}
-            .desktop-3-cols {width: 25%;}
-            .desktop-4-cols {width: 33.33%;}
-            .desktop-5-cols {width: 41.66%;}
-            .desktop-6-cols {width: 50%;}
-            .desktop-7-cols {width: 58.33%;}
-            .desktop-8-cols {width: 66.66%;}
-            .desktop-9-cols {width: 75%;}
-            .desktop-10-cols {width: 83.33%;}
-            .desktop-11-cols {width: 91.66%;}
-            .desktop-12-cols {width: 100%;}
+        #contacts {
+            float: left;
+            width: 20%;
+            height: 100%;
+            padding: 0;
+            border-right: 2px solid darkgreen;
         }
 
-        li {
-            list-style-type: none;
-            outline: solid;
-            padding: 10pt;
-            margin-bottom: 30pt;
-            width: 180pt;
-            font-size: 20pt;
-            margin-right: 25pt;
-        }
-
-        .chatl{
-            border: solid;
-            border-width: 3px 0 3px 3px;
-            font-size: 20pt;
-            position: relative;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 40pt;
-        }
-
-        .chatr{
-            border: solid;
-            border-width: 3px 3px 3px 0;
-            font-size: 20pt;
-            vertical-align: bottom;
-            padding-top: 20pt;
-            position: relative;
-            justify-content: center;
-            text-align: center;
-            margin-bottom: 40pt;
-        }
-
-        .chatr > p{
-            position: absolute;
-            bottom: 50pt;
-            padding: 5px;
-            background-color: #7fbf7f;
-            border-radius: 5px;
-            
-        }
-
-        .chatl > p{
-            position: absolute;
-            bottom: 90pt;
-            padding: 5px;
-            background-color: #329932;
-            margin-left: 15px;
-            border-radius: 5px;
-
-        }
-
-        p{
-            text-align: center;
-        }
-
-        .text{
-            align-self: right;
-            font-size: 20pt;
-            width: 63%;
-            justify-content: right;
-            text-align: right;
-            position: absolute;
-            right: 26pt;
-            bottom: 20pt;
-        }
-        
-        input{
-            font-size: 20pt;
-            margin-right: 10pt;
-            margin-left: auto;
-            margin-top: 10pt;
+        #contacts h1 {
             width: 100%;
-            
+            height: 60px;
+            text-align: center;
+            background-color: lightgreen;
+            border-bottom: 2px solid darkgreen;
+            color: darkgreen;
+            padding: 20px 0px 20px 0px;
+            padding-bottom: 60px;
+            margin: 0;
+        }
+
+        #contacts ul {
+            width: 100%;
+            height: 90%;
+            background-color: white;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #contacts li {
+            width: 100%;
+            padding: 20px;
+            font-size: 20pt;
+            color: #353535;
+            border-bottom: 1px solid lightgrey;
+            cursor: pointer;
+        }
+
+        #chatHistory {
+            float: left;
+            width: 80%;
+            height: 100%;
+            padding-right: 5px;
+        }
+
+        #chatHistory h1 {
+            width: 100%;
+            height: 60px;
+            background-color: lightgreen;
+            border-bottom: 2px solid darkgreen;
+            color: darkgreen;
+            padding: 20px;
+            padding-bottom: 60px;
+            margin: 0;
+        }
+
+        #chatMessages {
+            padding: 20px 20px 0px 20px;
+            height: 450px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .messageSend {
+            width: 100%;
+            text-align: right;
+        }
+
+        .messageSend span{
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 20pt;
+            background-color: #f9dbb4;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .messageReceived {
+            width: 100%;
+            text-align: left;
+        }
+
+        .messageReceived span{
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 20pt;
+            background-color: lightgray;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        #messageInput {
+            width: 98%;
+            height: 7%;
+            margin: 10px;
+            border-radius: 20px;
+            border: 2px solid lightgrey;
+            padding-left: 30px;
+            font-size: 20pt;
         }
 
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
     <script>
+
+        var currentChatPartner = "Kai";
+        var messagesTo = {
+             "Kai" : [[1, "Hallo"], [0, "Hallo zurück!"]],
+             "Magnus" : [[0, "Ich bin Magnus."]],
+             "Lukas" : [[0, "Magnus stinkt"], [1, "Ich weiß"], [0, "Ja"]]
+            };
+
+
+        function messageInputReceived(){
+            var key = event.code;
+            if (key == "Enter"){
+                var msg = document.getElementById("messageInput").value;
+                addMessage(msg, true);
+                messagesTo[currentChatPartner].push([true, msg]);
+            }
+        }
+
+        function addMessage(msg, wasSend){
+            var messageClass = wasSend ? "messageSend" : "messageReceived";
+
+            // Add new messageSend div to chatMessages div
+            const chatMessages = document.getElementById("chatMessages");
+            var messageDiv = document.createElement("div");
+            var messageSpan = document.createElement("span");
+            messageSpan.innerHTML = msg;
+            messageDiv.appendChild(messageSpan);
+            messageDiv.classList.add(messageClass);
+            chatMessages.appendChild(messageDiv);
+            messageDiv.scrollIntoView();
+
+            // Remove the text inside messageInput
+            if (wasSend) messageInput.value = "";
+        }
+
+        function clearMessages(){
+            const chatMessages = document.getElementById("chatMessages");
+            chatMessages.innerHTML = "";
+        }
+
+        function changeChatPartner(event){
+            const partnerLi = event.target;
+            currentChatPartner = partnerLi.innerHTML;
+
+            clearMessages();
+            var messageArray = messagesTo[currentChatPartner];
+            if (messageArray == undefined) messageArray = [];
+
+            for (var i = 0; i < messageArray.length; i++){
+                var message = messageArray[i];
+                addMessage(message[1], message[0]);
+            }
+        } 
+
+
 
     </script>
 
@@ -150,30 +196,24 @@
         </div>
     </div>
 
-    <div class="flex-container">
-        <div class="chats desktop-4-cols phone-12-cols">
+    <div id="chatApp">
+        <div id="contacts">
+            <h1>Kontakte</h1>
             <ul>
-                <li>Chat1</li>
-                <li>Chat2</li>
-                <li>Chat3</li>
-                <li>Chat4</li>
-                <li>Chat5</li>
+                <li onclick="changeChatPartner(event);" >Kai</li>
+                <li onclick="changeChatPartner(event);" >Magnus</li>
+                <li onclick="changeChatPartner(event);" >Lukas</li>
             </ul>
         </div>
 
-        
-        <div class="chatl desktop-4-cols phone-6-cols">
-            <p>Chatinhalt vom Chatpartner</p>
+        <div id="chatHistory">
+            <h1>Chatverlauf mit Kai</h1>
+            <div id="chatMessages">
+                <div class="messageSend"><span>Hallo</span></div>
+                <div class="messageReceived"><span>Hallo Zurück!</span></div>
+            </div>
+            <input type="text" id="messageInput" placeholder="Nachricht senden" onkeypress="messageInputReceived(event);" />
         </div>
-
-        <div class="chatr desktop-4-cols phone-6-cols">
-            <p>Chationhalt von sich selber</p>
-        </div>
-
-        <div class="text">
-            <input id="chat" type="text" placeholder="Nachricht">
-        </div>
-    
     </div>
 
 </body>
