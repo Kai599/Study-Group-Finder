@@ -54,11 +54,11 @@
             .desktop-12-cols {width: 100.00%;}
         }
 
-        .flex-container { 
+        .flex-container {
             display:-webkit-flex;
-            display: flex; 
+            display: flex;
             -webkit-flex-wrap: wrap;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
         }
 
     </style>
@@ -77,9 +77,37 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
 
+  <nav class="navbar">
+
+    <div class="logo">
+      <a href="menu.html">
+        <p>Finder</p>
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <a href="search.html">
+        <p>Suche</p>
+      </a>
+      <a href="myGroups.html">
+        <p>Gruppen</p>
+      </a>
+      <a href="myProfile.html" class="active">
+        <p>Profil</p>
+      </a>
+      <a href="chats.html">
+        <p>Chat</p>
+      </a>
+    </div>
+
+      </div>
+    </div>
+  </nav>
+
+
     <div class="siteHeader">
         <div class="button" id="backButton">
-            <input type="image" src="icons/west-24px.svg" onclick="location.href='menu.html'" />
+            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
             <p>Zurück</p>
         </div>
         <h1>MEIN PROFIL</h1>
