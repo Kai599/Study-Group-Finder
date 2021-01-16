@@ -14,7 +14,7 @@
         .siteHeader {
             margin-bottom: 50px;
         }
-        
+
         #chatApp {
             margin: 0 auto;
             width: 90%;
@@ -185,7 +185,7 @@
                 var message = messageArray[i];
                 addMessage(message[1], message[0]);
             }
-        } 
+        }
 
         function removePartnerHighlight(){
             const partnerList = document.getElementById("chatPartners");
@@ -201,6 +201,31 @@
 
 <!-- HTML --------------------------------------------------------------->
 <body>
+
+
+  <nav class="navbar">
+
+    <div class="logo">
+      <a href="menu.html">
+        <p>Finder</p>
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <a href="search.html">
+        <p>Suche</p>
+      </a>
+      <a href="myGroups.html">
+        <p>Gruppen</p>
+      </a>
+      <a href="myProfile.html">
+        <p>Profil</p>
+      </a>
+      <a href="chats.html" class="active">
+        <p>Chat</p>
+      </a>
+    </div>
+  </nav>
 
     <div class="siteHeader">
         <h1>CHATS</h1>

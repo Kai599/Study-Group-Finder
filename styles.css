@@ -18,6 +18,7 @@ html{
 
 .logo{
   padding-left: 2rem;
+  float: left;
 }
 
 .logo p{
