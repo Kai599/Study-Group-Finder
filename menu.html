@@ -22,49 +22,51 @@
        margin-left: auto;
     }
 
-    .container{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
-        flex-wrap: wrap;
+    .container {
         width: 100%;
-        height: 200px;
-    }
-
-    [class|="action"]{
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-
-        width: 400px;
-        height: 250px;
-        border: 3px solid #1F1F21;
-        border-radius: 10px;
-        margin: 20px;
-        background-color: lightgrey;
+        overflow: hidden;
+        padding: 50px 0px;
     }
 
-    [class|="action"]:hover{
-        transition: all 200ms;
-        -webkit-transition: all 200ms;
-        -moz-transition: all 200ms;
-        -o-transition: all 200ms;
-        background-color: #F5BB00;
-    }
+    .action {
+        display: grid;
+        width: 300px;
+        height: 500px;
 
-    .container input{
-        height: 100px;
-        width: 100px;
-    }
-
-    .container p{
-        font-size: 30px;
-        color: black;
+        border-radius: 0px;
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
         text-align: center;
-        font-weight: bold;
+        transition: 0.5s ease;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-right: 50px;
     }
+
+    .action-icon {
+        scale: 2;
+        margin-bottom: 30px;
+        margin-top: 200px;
+    }
+
+    .action-text {
+        font-family: Roboto;
+        font-weight: bold;
+        font-size: 25pt;
+        color: darkgreen;
+        width: 100%;
+        background-color: #5BC236;
+        padding-top: 30px;
+        border-radius: 0px 0px 0px 0px;
+    }
+
+    .action:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+    }
+
 
     </style>
 
@@ -83,24 +85,32 @@
 
     <div class="container">
 
-        <div class="action-1">
-            <p>Suche</p>
-            <input type="image" src="icons/search-black-18dp.svg" onclick="location.href='search.html'" />
+        <div class="action" onclick="location.href='search.html'">
+            <div class="action-icon">
+                <img type="image" src="icons/search-black-18dp.svg" />
+            </div>
+            <div class="action-text">Suche</div>
         </div>
 
-        <div class="action-2">
-            <p>Meine Gruppen</p>
-            <input type="image" src="icons/groups-24px.svg" onclick="location.href='myGroups.html'" />
+        <div class="action" onclick="location.href='myGroups.html'">
+            <div class="action-icon">
+                <img type="image" src="icons/groups-24px.svg" />
+            </div>
+            <div class="action-text">Meine Gruppen</div>
         </div>
 
-        <div class="action-3">
-            <p>Profil</p>
-            <input type="image" src="icons/person-black-18dp.svg" onclick="location.href='myProfile.html'" />
+        <div class="action" onclick="location.href='myProfile.html'">
+            <div class="action-icon">
+                <img type="image" src="icons/person-black-18dp.svg" />
+            </div>
+            <div class="action-text">Mein Profil</div>
         </div>
 
-        <div class="action-4">
-            <p>Chats</p>
-            <input type="image" src="icons/chat-24px.svg" onclick="location.href='chats.html'" />
+        <div class="action" onclick="location.href='chats.html'">
+            <div class="action-icon">
+                <img type="image" src="icons/chat-24px.svg" />
+            </div>
+            <div class="action-text">Chats</div>
         </div>
 
     </div>
