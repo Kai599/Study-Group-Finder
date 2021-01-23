@@ -70,24 +70,54 @@
     align-content: center;
   }
 
-
-  #list > li{
+  table{
     font-size: 30px;
+    width: 50%;
+    margin:20px;
   }
 
+  td,th{
+    padding: 10px;
+    border: 2px solid grey;
+  }
+  tr:hover{
+    background:  #3CB371;
+  }
+
+#beitreten, #abbrechen{
+border-radius: 10px;
+margin-left: 70px;
+margin-right: 70px;
+margin-bottom: 40px;
+font-size: 40px;
+}
+#beitreten:hover{
+background:  #3CB371;
+}
+#abbrechen:hover{
+  background: red;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+}
+
+#infos{
+  font-size: 30px;
+  display:none;
+  margin: 10px;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     </style>
 
-    <!-- JavaScript ---------------------------------------------------->
-    <script>
-
-    </script>
 
 </head>
 
 <!-- HTML --------------------------------------------------------------->
 <body>
 
+<!-- Navigationsleiste -->
 <nav class="navbar">
 
   <div class="logo">
@@ -115,23 +145,47 @@
   </div>
 </nav>
 
+<!-- Sucheingabe -->
     <div class="head" ><p>Suche</p></div>
     <div class="input_border" name="input_search" >
       <div class="td"><img src="lupe.jpg" class="icon" >
       </img>
     </div>
     <div class="td">
-      <input id="search" name="input_search" onkeyup="searchGroup()" class="input">
+      <input id="search" onkeyup="searchGroup()" name="input_search" class="input">
     </input>
       </div>
     </div>
 
-    <div id="groups">
-      <ul id="list">
 
-      </ul>
+<div class="container">
+
+    <!-- Tabelle mit ergebnissen -->
+  <table id="tab">
+    <tbody id="tabelle">
+
+    </tbody>
+  </table>
+
+  <!-- Informationsbereich der angezeigten Gruppe -->
+
+    <div id="infos">
+      <p id="groupinfo">
+      </p>
+      <label>Anzahl:
+        <p id="anzahl">
+        </p>
+      </label>
+
+      <button class="b" type="button" name="button" id="abbrechen">Abbruch</button>
+      <button class="b" onclick="beitreten()" name="button" id="beitreten">Beitreten</button>
     </div>
 
+
+</div>
+
+
+<!-- Footer bereich -->
     <footer>
     <div style="display: none" >Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     </footer>
