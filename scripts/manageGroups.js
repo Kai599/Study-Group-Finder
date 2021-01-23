@@ -93,13 +93,14 @@ function schließeFenster() {
 function getInformation(element){
   let info = document.getElementById('groupinfo');
   let anzahl = document.getElementById('anzahl');
+  let buttonYes = document.getElementById('beitreten');
 let name = element.innerText;
 for (var v of groups) {
   if(name === v.name){
     anzahl.innerHTML = v.anzahl;
     info.innerHTML = v.beschreibung;
     dialog.style.display = "block";
-
+    buttonYes.disabled = false;
   }
  }
 }
