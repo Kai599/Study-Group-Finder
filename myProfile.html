@@ -85,7 +85,10 @@
 <body>
 
   <nav class="navbar">
-
+    <div class="button" id="backButton">
+        <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+        <p>Zurück</p>
+    </div>
     <div class="logo">
       <a href="menu.html">
         <p>Finder</p>
@@ -129,13 +132,7 @@
 
   </nav>
 
-
     <div class="siteHeader">
-        <div class="button" id="backButton">
-            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
-            <p>Zurück</p>
-        </div>
-        <h1>MEIN PROFIL</h1>
         <div class="button" id="editButton">
             <input type="image" src="icons/edit-24px.svg" onclick="location.href='editProfil.html';" />
             <p>Bearbeiten</p>

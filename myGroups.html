@@ -103,10 +103,11 @@
             display: flex;
             -webkit-flex-wrap: wrap;
             flex-wrap: wrap;
+            cursor: pointer;
         }
 
-        .flex-container h1:hover{
-          background-color: #90EE90;
+        .flex-container:hover{
+            background-color: #90EE90;
         }
 
     </style>
@@ -137,7 +138,10 @@
 
 
   <nav class="navbar">
-
+    <div class="button" id="backButton">
+        <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+        <p>Zurück</p>
+    </div>
     <div class="logo">
       <a href="menu.html">
         <p>Finder</p>
@@ -167,7 +171,7 @@
     <a href="search.html">
       <p>Suche</p>
     </a>
-    <a href="myGroups.html" class="active">
+    <a href="myGroups.html"  class="active">
       <p>Gruppen</p>
     </a>
     <a href="myProfile.html">
@@ -181,14 +185,6 @@
 
   </nav>
 
-
-    <div class="siteHeader">
-        <h1>MEINE GRUPPEN</h1>
-        <div class="button" id="backButton">
-            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
-            <p>Zurück</p>
-        </div>
-      </div>
 
     <ul>
         <li>
