@@ -17,9 +17,12 @@
         }
 
         #chatApp {
+          display:flex;
+          flex-direction: row;
             margin: 0 auto;
             width: 90%;
             height: 600px;
+            margin-top: 7%;
         }
 
         #contacts {
@@ -221,7 +224,10 @@
 
 
   <nav class="navbar">
-
+    <div class="button" id="backButton">
+        <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+        <p>Zurück</p>
+    </div>
     <div class="logo">
       <a href="menu.html">
         <p>Finder</p>
@@ -257,7 +263,7 @@
     <a href="myProfile.html">
       <p>Profil</p>
     </a>
-    <a href="chats.html" class="active">
+    <a href="chats.html"  class="active">
       <p>Chat</p>
     </a>
   </div>
@@ -265,13 +271,6 @@
 
   </nav>
 
-    <div class="siteHeader">
-        <h1>CHATS</h1>
-        <div class="button" id="backButton">
-            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
-            <p>Zurück</p>
-        </div>
-    </div>
 
     <div id="chatApp">
         <div id="contacts">
