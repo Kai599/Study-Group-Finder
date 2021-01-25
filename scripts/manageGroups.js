@@ -21,11 +21,11 @@ var group2 = new group("G", "Wirtschaftsinformatik",
  "Wenn es bei dir auch nicht fuer ein richtiges Informatik Studium gereicht hat, dann komm in unsere Hoffnungslose Gruppe",
 "4/12"
 );
-var group3 = new group("Progers", "Informatik");
-var group4 = new group("Biwis", "BWL");
-var group5 = new group("Speakers", "Spanisch");
-var group6 = new group("Infos", "Informatik");
-var group7 = new group("Anas", "Mathe");
+var group3 = new group("Proggers", "Informatik", "Wir programmieren", "4/6");
+var group4 = new group("Biwis", "BWL", "Kann bitte jemand meiner Gruppe beitreten?", "1/12");
+var group5 = new group("Speakers", "Spanisch", "Hola, aprendamos espanol.", "8/8");
+var group6 = new group("Infos", "Informatik", "Informatik Infos", "30/32");
+var group7 = new group("Anas", "Mathe", "Wer Spaß hasst kommt hier her", "1/16");
 
 var groups = [group1,group2,group3,group4,group5,group6,group7];
 
