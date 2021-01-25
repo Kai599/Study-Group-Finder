@@ -181,6 +181,8 @@
             clearMessages();
             removePartnerHighlight();
 
+            document.getElementById("chattingWith").innerHTML = "Chatverlauf mit " + currentChatPartner;
+
             partnerLi.style.background = "#E1E1E1";
 
             var messageArray = messagesTo[currentChatPartner];
@@ -282,7 +284,7 @@
         </div>
 
         <div id="chatHistory">
-            <h1>Chatverlauf mit Kai</h1>
+            <h1 id="chattingWith">Chatverlauf mit Kai</h1>
             <div id="chatMessages">
                 <div class="messageSend"><span>Hallo</span></div>
                 <div class="messageReceived"><span>Hallo Zurück!</span></div>
