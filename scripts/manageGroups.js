@@ -40,20 +40,21 @@ function create(name,fach,beschreibung){
 
 //Sucht die Gruppen nach namen und fächern durch
 function searchGroup(){
-  const input = usereingabe.value;
+  const input = usereingabe.value.toUpperCase();
   let h = document.getElementById('search').value;
-  if(h.length == 0){
+  if(h.length == 0 || input.trim().length == 0){
     deleteLI();
     schließeFenster();
+    return;
   }
   if(groups.filter(x => x.name.toUpperCase() === input.toUpperCase())){
-    const name = groups.filter(x => x.name.toUpperCase() === input.toUpperCase());
+    const name = groups.filter(x => x.name.toUpperCase().search(".*" + input + ".*") != -1);
     if(name.length > 0){
       addListeUI(name);
     }
   }
   if(groups.filter(x => x.fach.toUpperCase() === input.toUpperCase())){
-    const fach = groups.filter(x => x.fach.toUpperCase() === input.toUpperCase());
+    const fach = groups.filter(x => x.fach.toUpperCase().search(".*" + input + ".*") != -1);
     if(fach.length > 0){
       addListeUI(fach);
     }
