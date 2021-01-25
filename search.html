@@ -139,7 +139,10 @@ background:  #3CB371;
 
 <!-- Navigationsleiste -->
 <nav class="navbar">
-
+  <div class="button" id="backButton">
+      <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+      <p>Zurück</p>
+  </div>
   <div class="logo">
     <a href="menu.html">
       <p>Finder</p>
@@ -147,10 +150,10 @@ background:  #3CB371;
   </div>
 
   <div class="nav-container">
-    <a href="search.html" class="active">
+    <a href="search.html"  class="active">
       <p>Suche</p>
     </a>
-    <a href="myGroups.html" >
+    <a href="myGroups.html">
       <p>Gruppen</p>
     </a>
     <a href="myProfile.html">
@@ -166,7 +169,7 @@ background:  #3CB371;
 <div class="mobile-nav-mobile" onclick="dropdownMenu()"><p>&equiv;</p></div>
 
 <div id="mobile" class="mobile-nav-container clearfix">
-  <a href="search.html" class="active">
+  <a href="search.html"  class="active">
     <p>Suche</p>
   </a>
   <a href="myGroups.html">
