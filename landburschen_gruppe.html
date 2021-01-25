@@ -93,7 +93,34 @@
 
 	  padding: 20px;
 	
-	}
+  }
+  
+  #newEntryDatetime {
+      font-size: 18px;
+      padding: 5px;
+      margin-right: 40px;
+      border-radius: 5px;
+      border: 2px solid grey;
+    }
+
+    #newEntryEvent {
+      font-size: 18px;
+      padding: 5px;
+      margin-right: 40px;
+      border-radius: 5px;
+      border: 2px solid grey;
+    }
+
+    #addNewEvent {
+      font-size: 25px;
+      padding: 5px;
+      border-radius: 5px;
+      color: darkgreen;
+      background-color: lightgreen;
+      border: 2px solid darkgreen;
+      margin-bottom: 50px;
+      cursor: pointer;
+    }
 
     </style>
 
@@ -108,6 +135,26 @@
         function dropdownMenu(){
 
            document.getElementById('mobile').style.display = "block";
+        }
+
+        function addCalendarEntry(){
+            const datetime = document.getElementById("newEntryDatetime").value;
+            const event = document.getElementById("newEntryEvent").value;
+
+            const calendarEntries = document.getElementById("calendarEntries");
+            let calendarEntry = document.createElement("li");
+            let calendarDatetime = document.createElement("span");
+            let calendarEvent = document.createElement("span");
+            calendarDatetime.classList.add("datetime");
+            calendarEvent.classList.add("event");
+            calendarDatetime.innerHTML = datetime;
+            calendarEvent.innerHTML = event;
+            calendarEntry.appendChild(calendarDatetime);
+            calendarEntry.appendChild(calendarEvent);
+            calendarEntries.appendChild(calendarEntry);
+
+            document.getElementById("newEntryDatetime").value = "";
+            document.getElementById("newEntryEvent").value = "";
         }
 
 
@@ -141,15 +188,22 @@
     </div>
     <div class="kalender">
       <label class="h2">Termine</label>
-      <ul>
+      <ul id="calendarEntries">
         <li><span class="datetime">27.01.2021 21:00</span><span class="event">Saufen</span></li>
         <li><span class="datetime">28.01.2021 21:00</span><span class="event">Saufen</span></li>
         <li><span class="datetime">01.02.2021 08:00</span><span class="event">Lernen für BWL</span></li>
         <li><span class="datetime">11.02.2021 09:00</span><span class="event">Gruppentreffen</span></li>
         <li><span class="datetime">28.02.2021 12:00</span><span class="event">Klausur Werkstoffkunde</span></li>
-        
-        
       </ul>
+      <div id="newCalendarEntry">
+        <h3>Neuen Termin hinzufügen:</h3>
+        <label for="newEntryDatetime">Datum:</label>
+        <input type="text" id="newEntryDatetime">
+        <label for="newEntryEvent">Eintrag:</label>
+        <input type="text" id="newEntryEvent">
+        <br></br>
+        <button type="button" id="addNewEvent" onclick="addCalendarEntry()">Hinzufügen</button>
+      </div>
     </div>
   </div>
 <script src="script.js"></script>
