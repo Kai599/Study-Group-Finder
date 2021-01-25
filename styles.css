@@ -45,6 +45,7 @@ body{
   color: black;
   font-size: 40pt;
   font-weight: bold;
+  text-decoration: none;
   height: 100%;
     margin: 0;
     padding-top: 1%;
@@ -81,6 +82,7 @@ background:red;
 .nav-container > a > p{
 font-weight: bold;
 padding:5px;
+text-decoration: none;
 }
 
 #backButton{
@@ -200,6 +202,8 @@ display: inline-block;
     margin: 40px;
     width: 100px;
     text-align: center;
+    margin-left: 0;
+    margin-bottom: 0;
 }
 
 .button input{

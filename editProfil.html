@@ -18,7 +18,7 @@
         }
 
         #infos {
-            margin-top: 80px;
+
         }
 
         #profilePic {
@@ -62,12 +62,14 @@
             .desktop-12-cols {width: 100.00%;}
         }
 
-        .flex-container { 
+        .flex-container {
             display:-webkit-flex;
-            display: flex; 
+            display: flex;
             -webkit-flex-wrap: wrap;
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
         }
+
+
 
     </style>
 
@@ -81,16 +83,58 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
 
-    <div class="siteHeader">
-        <div class="button" id="backButton">
-            <input type="image" src="icons/west-24px.svg" onclick="location.href='myProfile.html'" />
-            <p>Zurück</p>
-        </div>
-        <h1>PROFIL BEARBEITEN</h1>
+
+    <nav class="navbar">
+      <div class="button" id="backButton">
+          <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+          <p>Zurück</p>
+      </div>
+      <div class="logo">
+        <a href="menu.html">
+          <p>Finder</p>
+        </a>
+      </div>
+
+      <div class="nav-container">
+        <a href="search.html">
+          <p>Suche</p>
+        </a>
+        <a href="myGroups.html">
+          <p>Gruppen</p>
+        </a>
+        <a href="myProfile.html" class="active">
+          <p>Profil</p>
+        </a>
+        <a href="chats.html">
+          <p>Chat</p>
+        </a>
+      </div>
+
+  <div class="mobile-dropdown clearfix">
+
+  <div class="mobile-nav-mobile" onclick="dropdownMenu()"><p>&equiv;</p></div>
+
+    <div id="mobile" class="mobile-nav-container clearfix">
+      <a href="search.html">
+        <p>Suche</p>
+      </a>
+      <a href="myGroups.html">
+        <p>Gruppen</p>
+      </a>
+      <a href="myProfile.html"  class="active">
+        <p>Profil</p>
+      </a>
+      <a href="chats.html">
+        <p>Chat</p>
+      </a>
+    </div>
+  </div>
+</nav>
+
         <div class="button" id="saveButton" onclick="location.href='myProfile.html';alert('Erfolgreich bearbeitet!')">
             <h2>OK</h2>
         </div>
-    </div>
+
 
     <div id="infos" class="flex-container">
         <div class="pad phone-12-cols desktop-2-cols"></div>

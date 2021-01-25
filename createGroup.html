@@ -23,6 +23,7 @@
        justify-content: space-between;
       width: 100%;
       height: 100%;
+      margin-top: 7%;
     }
 
     .header{
@@ -123,28 +124,69 @@
 <!-- HTML --------------------------------------------------------------->
 <body>
 
-  <div class="siteHeader">
-    <h1>NEUE GRUPPE</h1>
-    <div class="button" id="backButton">
-        <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
-        <p>Zurück</p>
+
+    <nav class="navbar">
+      <div class="button" id="backButton">
+          <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
+          <p>Zurück</p>
+      </div>
+      <div class="logo">
+        <a href="menu.html">
+          <p>Finder</p>
+        </a>
+      </div>
+
+      <div class="nav-container">
+        <a href="search.html">
+          <p>Suche</p>
+        </a>
+        <a href="myGroups.html" class="active">
+          <p>Gruppen</p>
+        </a>
+        <a href="myProfile.html">
+          <p>Profil</p>
+        </a>
+        <a href="chats.html">
+          <p>Chat</p>
+        </a>
+      </div>
+
+  <div class="mobile-dropdown clearfix">
+
+  <div class="mobile-nav-mobile" onclick="dropdownMenu()"><p>&equiv;</p></div>
+
+    <div id="mobile" class="mobile-nav-container clearfix">
+      <a href="search.html">
+        <p>Suche</p>
+      </a>
+      <a href="myGroups.html"  class="active">
+        <p>Gruppen</p>
+      </a>
+      <a href="myProfile.html">
+        <p>Profil</p>
+      </a>
+      <a href="chats.html">
+        <p>Chat</p>
+      </a>
     </div>
   </div>
+
+    </nav>
 
 
       <div class="container">
         <div class="leftside">
           <div class="action-1">
             <p>Gruppenname:</p><br>
-            <input type="text" id="gruppenname" name="name" placeholder="Gruppenname">
+            <input type="text" id="gruppenname" name="name" placeholder="Gruppenname" required>
           </div>
           <div class="action-3">
             <p>Max Teilnehmer:</p><br>
-            <input type="number" id="anzahl" name="name" placeholder="Anzahl">
+            <input type="number" id="anzahl" name="name" placeholder="Anzahl" required>
             </div>
             <div class="action-5">
               <p>Fachrichtung:</p><br>
-              <input type="text" id="fach" name="name" placeholder="Fachrichtung">
+              <input type="text" id="fach" name="name" placeholder="Fachrichtung" required>
               </div>
         </div>
         <div class="rightside">
@@ -154,7 +196,8 @@
           </div>
           <div class="action-4">
               <div id="back"><a href="myGroups.html">Abbrechen</a></div>
-              <div id="erstellen" onclick="s();window.history.back();alert('Gruppe hinzugefügt!')">Erstellen</div>
+              <button type="button" id="erstellen" onkeyup="check()" onclick="s();window.history.back();alert('Gruppe hinzugefügt!')" name="button">Erstellen</button>
+
           </div>
         </div>
 

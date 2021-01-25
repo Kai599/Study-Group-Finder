@@ -15,7 +15,7 @@ function storage(){
     let beschreibung = localStorage.getItem('beschreibung');
 
 
-    var groupa = new group(name,fach,beschreibung,anzahl);
+    var groupa = new group(name,fach,beschreibung,"1/"+anzahl);
     groups.push(groupa);
     localStorage.removeItem('name');
     localStorage.removeItem('fach');
