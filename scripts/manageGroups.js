@@ -18,7 +18,7 @@ var group1 = new group("Die Informierer", "Informatik",
 "3/5"
 );
 var group2 = new group("G", "Wirtschaftsinformatik",
- "Wenn es bei dir auch nicht fuer ein richtige Informatik Studium gereicht hat, dann komm in unsere Hoffnungslose Gruppe",
+ "Wenn es bei dir auch nicht fuer ein richtiges Informatik Studium gereicht hat, dann komm in unsere Hoffnungslose Gruppe",
 "4/12"
 );
 var group3 = new group("Progers", "Informatik");
@@ -67,7 +67,7 @@ function addListeUI(element){
 const tabelle = document.getElementById('tabelle');
 let stuff = '';
 for (var s of element) {
-  stuff += `<tr id="change"><td onclick="getInformation(this)" id="s">${s.name}</td><td>${s.fach}</td></tr>`;
+  stuff += `<tr id="change" onclick="getInformation(this)" ><td id="s">${s.name}</td><td>${s.fach}</td></tr>`;
 }
 
 tabelle.innerHTML = stuff;
@@ -83,7 +83,6 @@ g.innerHTML = '';
 let tabe = document.getElementById('tabelle');
 let dialog = document.getElementById('infos');
 let abbruch = document.getElementById('abbrechen');
-tabe.addEventListener('click',getInformation);
 abbruch.addEventListener('click',schließeFenster);
 
 
@@ -95,15 +94,15 @@ function getInformation(element){
   let info = document.getElementById('groupinfo');
   let anzahl = document.getElementById('anzahl');
   let buttonYes = document.getElementById('beitreten');
-let name = element.innerText;
-for (var v of groups) {
-  if(name === v.name){
-    anzahl.innerHTML = v.anzahl;
-    info.innerHTML = v.beschreibung;
-    dialog.style.display = "block";
-    buttonYes.disabled = false;
+  let name = element.children[0].innerText;
+  for (var v of groups) {
+    if(name === v.name){
+      anzahl.innerHTML = v.anzahl;
+      info.innerHTML = v.beschreibung;
+      dialog.style.display = "block";
+      buttonYes.disabled = false;
+    }
   }
- }
 }
 
 
