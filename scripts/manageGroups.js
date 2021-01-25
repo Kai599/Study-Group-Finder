@@ -4,6 +4,25 @@ onload = (e) => {
   usereingabe = document.getElementById('search');
 }
 
+//Local-Storage verwaltung
+
+function storage(){
+  console.log(localStorage);
+  if(localStorage.length != 0){
+    let name = localStorage.getItem('name');
+    let fach = localStorage.getItem('fach');
+    let anzahl = localStorage.getItem('anzahl');
+    let beschreibung = localStorage.getItem('beschreibung');
+
+
+    var groupa = new group(name,fach,beschreibung,anzahl);
+    groups.push(groupa);
+    localStorage.removeItem('name');
+    localStorage.removeItem('fach');
+    localStorage.removeItem('anzahl');
+    localStorage.removeItem('beschreibung');
+  }
+}
 
 //groups
 function group(name, fach,beschreibung,anzahl){
@@ -12,7 +31,6 @@ function group(name, fach,beschreibung,anzahl){
   this.beschreibung = beschreibung;
   this.anzahl = anzahl;
 }
-
 var group1 = new group("Die Informierer", "Informatik",
 "Hi, wir sind die Informierer und suchen noch hoffnungsvoll nach neuen Mitgliedern!",
 "3/5"
@@ -33,13 +51,27 @@ var groups = [group1,group2,group3,group4,group5,group6,group7];
 function add(element){
   groups.push(element);
 }
-function create(name,fach,beschreibung){
-  var group = new group(name,fach,beschreibung);
+function create(name,fach,beschreibung,anzahl){
+  const group = new group(name,fach,beschreibung,anzahl);
   add(group);
 }
 
 //Sucht die Gruppen nach namen und fächern durch
+
 function searchGroup(){
+
+  storage();
+
+  for (var s of groups) {
+    console.log(s.name);
+  }
+
+for (var i = 0; i < groups.length; i++) {
+    if(groups[i] === null){
+      groups.splice(i,1);
+
+    }
+}
   const input = usereingabe.value.toUpperCase();
   let h = document.getElementById('search').value;
   if(h.length == 0 || input.trim().length == 0){
@@ -104,7 +136,6 @@ function getInformation(element){
     }
   }
 }
-
 
 function beitreten(){
   let buttonYes = document.getElementById('beitreten');

@@ -136,31 +136,31 @@
         <div class="leftside">
           <div class="action-1">
             <p>Gruppenname:</p><br>
-            <input type="text" name="name" placeholder="Gruppenname">
+            <input type="text" id="gruppenname" name="name" placeholder="Gruppenname">
           </div>
           <div class="action-3">
             <p>Max Teilnehmer:</p><br>
-            <input type="number" name="name" placeholder="Anzahl">
+            <input type="number" id="anzahl" name="name" placeholder="Anzahl">
             </div>
             <div class="action-5">
               <p>Fachrichtung:</p><br>
-              <input type="text" name="name" placeholder="Fachrichtung">
+              <input type="text" id="fach" name="name" placeholder="Fachrichtung">
               </div>
         </div>
         <div class="rightside">
           <div class="action-2">
             <p>Beschreibung:</p><br>
-            <textarea name="name" rows="6" cols="50"></textarea>
+            <textarea name="name" id="beschreibung" rows="6" cols="50"></textarea>
           </div>
           <div class="action-4">
-              <div id="back">Abbrechen</div>
-              <div id="erstellen" onclick="window.history.back();alert('Gruppe hinzugefügt!')" >Erstellen</div>
+              <div id="back"><a href="myGroups.html">Abbrechen</a></div>
+              <div id="erstellen" onclick="s();window.history.back();alert('Gruppe hinzugefügt!')">Erstellen</div>
           </div>
         </div>
 
       </div>
 
-
+<script src="scripts/createGroup.js"></script>
 
 </body>
 
