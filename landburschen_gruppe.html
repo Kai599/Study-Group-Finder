@@ -17,18 +17,10 @@
     text-decoration: none;
     }
 
-    .main{
-     height: 100vh;
-     display: flex;
-     flex-direction: column;
-     align-items:flex-start;
-     justify-content:flex-start;
-   }
-
    .container{
      display: flex;
       align-items: flex-start;
-      flex-direction: column;
+      flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
       height: 100%;
@@ -38,12 +30,6 @@
     .header{
       font-size: 80px;
 
-    }
-
-    .h2{
-      text-decoration: underline;
-      font-size: 30px;
-      margin-bottom: 40px;
     }
 
     .text{
@@ -61,10 +47,47 @@
       color: white;
     }
 
+    .infos{
+      display: flex;
+      flex-direction: column;
+      margin: 80px;
+    }
+
+
+        .h2{
+          text-decoration: underline;
+          font-size: 30px;
+          margin-bottom: 40px;
+        }
+
+        .kalender{
+          margin: 80px;
+          width: 40%;
+          height: 500px;
+          background-color: grey;
+        }
+
+	.box {
+
+	  padding: 20px;
+	
+	}
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
     <script>
+
+		
+        function goBack(){
+            window.history.back();
+        }
+
+        function dropdownMenu(){
+
+           document.getElementById('mobile').style.display = "block";
+        }
+
 
     </script>
 
@@ -74,29 +97,31 @@
 <body>
 
   <div class="siteHeader">
-    <h1>LANDBURSCHEN</h1>
+    <h1>Landburschen Gruppe</h1>
     <div class="button" id="backButton">
         <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
         <p>Zurück</p>
     </div>
   </div>
-  
-<section class="main">
+
+
   <div class="container">
-     <label class="h2" form="person">Landburschen</label>
-     <label class="h2" form="person">Über uns</label>
-     <div class="text">
-      <p> Wir sind Landburschen<br> und sind vom Land.</p>
-     </div>
-     <div class="chat">
-       <a href="chats.html">
-         <p>Gruppenchat</p>
-       </a>
-     </div>
+    <div class="infos">
+      <label class="h2" form="person">Über uns</label>
+      <div class="text">
+       <p class="box" > Wir die Informiere sind eine engagierte Gruppe,<br> die noch ein weiteres Mitglied suchen.</p>
+      </div>
+      <div class="chat">
+        <a href="chats.html">
+          <p class="box" style="text-align: center" >Gruppenchat</p>
+        </a>
+      </div>
+    </div>
+    <div class="kalender">
+
+    </div>
   </div>
-</section>
-
-
+<script src="script.js"></script>
 </body>
 
 </html>
