@@ -53,19 +53,40 @@
       margin: 80px;
     }
 
+    .h2{
+      text-decoration: underline;
+      font-size: 60px;
+      margin-bottom: 40px;
+    }
 
-        .h2{
-          text-decoration: underline;
-          font-size: 30px;
-          margin-bottom: 40px;
-        }
+    .kalender{
+      margin: 80px;
+      width: 40%;
+      height: 500px;
+      font-size: 25px;
+      padding: 0;
+    }
 
-        .kalender{
-          margin: 80px;
-          width: 40%;
-          height: 500px;
-          background-color: grey;
-        }
+    .kalender ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 50px;
+    }
+
+    .kalender li {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .datetime {
+      margin: 40px;
+      margin-left: 0;
+      list-style: none;
+      background-color: #E12120;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+    }
 
 	.box {
 
@@ -118,7 +139,17 @@
       </div>
     </div>
     <div class="kalender">
-
+      <label class="h2">Termine</label>
+      <ul>
+        <li><span class="datetime">26.01.2021 18:00</span><span class="event">Gruppenkuscheln mit den Informierern</span></li>
+        <li><span class="datetime">02.02.2021 18:00</span><span class="event">Gruppenkuscheln mit den Informierern</span></li>
+        <li><span class="datetime">09.02.2021 08:00</span><span class="event">Lernen für HCI</span></li>
+        <li><span class="datetime">14.02.2021 11:00</span><span class="event">Valentinstag</span></li>
+        <li><span class="datetime">16.02.2021 16:00</span><span class="event">Lernen für HCI</span></li>
+        <li><span class="datetime">17.02.2021 16:00</span><span class="event">Geburtstag Aische</span></li>
+        <li><span class="datetime">30.02.2021 16:00</span><span class="event">Klausur Informatik</span></li>
+        
+      </ul>
     </div>
   </div>
 <script src="script.js"></script>

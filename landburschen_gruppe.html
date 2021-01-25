@@ -54,18 +54,40 @@
     }
 
 
-        .h2{
-          text-decoration: underline;
-          font-size: 30px;
-          margin-bottom: 40px;
-        }
+    .h2{
+      text-decoration: underline;
+      font-size: 60px;
+      margin-bottom: 40px;
+    }
 
-        .kalender{
-          margin: 80px;
-          width: 40%;
-          height: 500px;
-          background-color: grey;
-        }
+    .kalender{
+      margin: 80px;
+      width: 40%;
+      height: 500px;
+      font-size: 25px;
+      padding: 0;
+    }
+
+    .kalender ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 50px;
+    }
+
+    .kalender li {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .datetime {
+      margin: 40px;
+      margin-left: 0;
+      list-style: none;
+      background-color: #E12120;
+      padding: 10px;
+      border-radius: 5px;
+      color: white;
+    }
 
 	.box {
 
@@ -118,7 +140,16 @@
       </div>
     </div>
     <div class="kalender">
-
+      <label class="h2">Termine</label>
+      <ul>
+        <li><span class="datetime">27.01.2021 21:00</span><span class="event">Saufen</span></li>
+        <li><span class="datetime">28.01.2021 21:00</span><span class="event">Saufen</span></li>
+        <li><span class="datetime">01.02.2021 08:00</span><span class="event">Lernen für BWL</span></li>
+        <li><span class="datetime">11.02.2021 09:00</span><span class="event">Gruppentreffen</span></li>
+        <li><span class="datetime">28.02.2021 12:00</span><span class="event">Klausur Werkstoffkunde</span></li>
+        
+        
+      </ul>
     </div>
   </div>
 <script src="script.js"></script>
