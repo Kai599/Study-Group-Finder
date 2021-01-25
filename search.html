@@ -14,10 +14,12 @@
     *{
         box-sizing: border-box;
         outline: none;
+        font-size: 24pt;
+
     }
 
         .head {
-            font-size: 50pt;
+            font-size: 50px;
             text-align: center;
             font-family: Lucida Sans;
             width: 20%;
@@ -26,6 +28,9 @@
 	    margin-bottom: 2%;
         }
 
+        .head > p{
+          font-size: 50px;
+        }
 
 	.td {
   	  display: table-cell;
@@ -101,6 +106,9 @@ background:  #3CB371;
 .container{
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
 }
 
 #infos{
@@ -110,6 +118,13 @@ background:  #3CB371;
  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     </style>
+
+    <script>
+    function dropdownMenu(){
+
+       document.getElementById('mobile').style.display = "block";
+    }
+    </script>
 
 
 </head>
@@ -130,7 +145,7 @@ background:  #3CB371;
     <a href="search.html" class="active">
       <p>Suche</p>
     </a>
-    <a href="myGroups.html">
+    <a href="myGroups.html" >
       <p>Gruppen</p>
     </a>
     <a href="myProfile.html">
@@ -141,8 +156,26 @@ background:  #3CB371;
     </a>
   </div>
 
-    </div>
-  </div>
+<div class="mobile-dropdown clearfix">
+
+<div class="mobile-nav-mobile" onclick="dropdownMenu()"><p>&equiv;</p></div>
+
+<div id="mobile" class="mobile-nav-container clearfix">
+  <a href="search.html" class="active">
+    <p>Suche</p>
+  </a>
+  <a href="myGroups.html">
+    <p>Gruppen</p>
+  </a>
+  <a href="myProfile.html">
+    <p>Profil</p>
+  </a>
+  <a href="chats.html">
+    <p>Chat</p>
+  </a>
+</div>
+</div>
+
 </nav>
 
 <!-- Sucheingabe -->

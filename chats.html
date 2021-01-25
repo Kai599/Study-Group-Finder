@@ -8,7 +8,8 @@
         *{
             box-sizing: border-box;
             font-family: "Lucida Sans", sans-serif;
-            overflow: hidden;
+            /* overflow: hidden; */
+            font-size: 24pt;
         }
 
         .siteHeader {
@@ -125,6 +126,10 @@
             background-color: #E1E1E1;
         }
 
+        #chatPartners{
+          margin-top:0;
+        }
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
@@ -195,6 +200,11 @@
             }
         }
 
+        function dropdownMenu(){
+
+           document.getElementById('mobile').style.display = "block";
+        }
+
     </script>
 
 </head>
@@ -225,6 +235,27 @@
         <p>Chat</p>
       </a>
     </div>
+
+<div class="mobile-dropdown clearfix">
+
+<div class="mobile-nav-mobile" onclick="dropdownMenu()"><p>&equiv;</p></div>
+
+  <div id="mobile" class="mobile-nav-container clearfix">
+    <a href="search.html">
+      <p>Suche</p>
+    </a>
+    <a href="myGroups.html">
+      <p>Gruppen</p>
+    </a>
+    <a href="myProfile.html">
+      <p>Profil</p>
+    </a>
+    <a href="chats.html" class="active">
+      <p>Chat</p>
+    </a>
+  </div>
+</div>
+
   </nav>
 
     <div class="siteHeader">
