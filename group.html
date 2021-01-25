@@ -67,10 +67,27 @@
           background-color: grey;
         }
 
+	.box {
+
+	  padding: 20px;
+	
+	}
+
     </style>
 
     <!-- JavaScript ---------------------------------------------------->
-    <script >
+    <script>
+
+		
+        function goBack(){
+            window.history.back();
+        }
+
+        function dropdownMenu(){
+
+           document.getElementById('mobile').style.display = "block";
+        }
+
 
     </script>
 
@@ -92,11 +109,11 @@
     <div class="infos">
       <label class="h2" form="person">Über uns</label>
       <div class="text">
-       <p> Wir die Informiere sind eine engagierte Gruppe,<br> die noch eine weiteres Mitglied suchen.</p>
+       <p class="box" > Wir die Informiere sind eine engagierte Gruppe,<br> die noch ein weiteres Mitglied suchen.</p>
       </div>
       <div class="chat">
         <a href="chats.html">
-          <p>Gruppenchat</p>
+          <p class="box" style="text-align: center" >Gruppenchat</p>
         </a>
       </div>
     </div>
