@@ -111,6 +111,11 @@
     <!-- JavaScript ---------------------------------------------------->
     <script>
 
+	function goBack(){
+            window.history.back();
+        }
+
+
     </script>
 
 </head>
@@ -121,7 +126,7 @@
   <div class="siteHeader">
     <h1>NEUE GRUPPE</h1>
     <div class="button" id="backButton">
-        <input type="image" src="icons/west-24px.svg" onclick="location.href='myGroups.html'" />
+        <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
         <p>Zurück</p>
     </div>
   </div>
@@ -149,7 +154,7 @@
           </div>
           <div class="action-4">
               <div id="back">Abbrechen</div>
-              <div id="erstellen">Erstellen</div>
+              <div id="erstellen" onclick="window.history.back();alert('Gruppe hinzugefügt!')" >Erstellen</div>
           </div>
         </div>
 
