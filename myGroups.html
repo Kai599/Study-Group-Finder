@@ -123,6 +123,11 @@
            document.getElementById('mobile').style.display = "block";
         }
 
+	function goBack(){
+            window.history.back();
+        }
+
+
     </script>
 
 </head>
@@ -180,7 +185,7 @@
     <div class="siteHeader">
         <h1>MEINE GRUPPEN</h1>
         <div class="button" id="backButton">
-            <input type="image" src="icons/west-24px.svg" onclick="location.href='menu.html'" />
+            <input type="image" src="icons/west-24px.svg" onclick="goBack()" />
             <p>Zurück</p>
         </div>
       </div>
